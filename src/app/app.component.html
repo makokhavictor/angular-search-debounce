@@ -1,0 +1,10 @@
+<div class="wrapper">
+  <div class="control">
+    <input type="text"  class="input" (keyup)="searchTodos($event)">
+  </div>
+
+  {{isLoading}}
+  <div class="list">
+    <a *ngFor="let item of results$|async" class="list-item"> {{item.title}}</a>
+  </div>
+</div>
